@@ -1,5 +1,5 @@
 
-##Item 7 - Avoid finalizers
+## Item 7 - Avoid finalizers
 1. Java finalizers not analogous to c++ destructors.
 2. Java Finalizers may or may not be invoked.
 3. Do not put critical code in finalizers instead put them in try..finally{}
