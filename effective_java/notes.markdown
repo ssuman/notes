@@ -5,6 +5,8 @@
 2. Static factory methods often avoid creating unnecessary objects. 
 3. Boolean.valueOf(String) is preferable to constructor Boolean(String).
 4. Mutable objects can also be reused if we know the object won't be modified.
+5. Static initialization blocks can be used to initialize the mutable object once.
+6. Autoboxing also creates unnecessary objects. Prefer primitives to boxed primitives.
 
 ### Item 7 - Avoid finalizers
 1. Java finalizers not analogous to c++ destructors.
