@@ -20,4 +20,6 @@
 	* Ensure that the class can't be extended.
 	* Make all fields final and private.
 	* When multable member is present, ensure clients of the class cannot obtain references to these objects. Provide defensive copies.
-2. Immutable classes create many objects hence can cause performance problems. 
+2. Immutable objects are inherently thread safe. They require no synchronization.
+3. Clone or copy constructor should not be provided on an immutable class.
+3. Immutable classes create many objects hence can cause performance problems. Can be solved by providing a mutable companion.
