@@ -14,4 +14,10 @@
 3. Do not put critical code in finalizers instead put them in try..finally{}
 4. Finalizers have performance problems.
 
-
+### Item 15 - Minimize mutability
+1. Five rules to follow to create a immutable class.
+	* Don't provide any "setter" methods.
+	* Ensure that the class can't be extended.
+	* Make all fields final and private.
+	* When multable member is present, ensure clients of the class cannot obtain references to these objects. Provide defensive copies.
+2. Immutable classes create many objects hence can cause performance problems. 
