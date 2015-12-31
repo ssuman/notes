@@ -1,4 +1,13 @@
 ## Effective Java Notes -
+### Item 1 - Consider Static factory methods instead of constructors.
+1. Advantages of static factory methods are:
+	* Static factory methods have names unlike constructors.
+	* Static factory methods are not required to create a new Object each time they are invoked.
+	* Static factory methods can return an object of any subtype.
+	* Static factory methods can reduce verbosity of creating parameterized type instances.
+2. Disadvantage of static factory methods are:
+	* Providing only static factory methods without public or protected constructors cannot be subclassed.
+	* Not readily distinguishable from other static methods.
 
 ### Item 5 - Avoid creating unnecessary objects
 1. Reuse of a single object instead of creating a new object each time is both faster and stylish.
@@ -23,3 +32,9 @@
 2. Immutable objects are inherently thread safe. They require no synchronization.
 3. Clone or copy constructor should not be provided on an immutable class.
 3. Immutable classes create many objects hence can cause performance problems. Can be solved by providing a mutable companion.
+
+### Item 16 - Favor Composition over inheritance
+1. It is safe to use inheritance within a package, where the subclass and superclass are under the control of the same programmer.
+2. Inheriting across package boudaries is dangerous.
+3. Inheritance violates encapsulation. The superclass implementation may change from release to release. This might break the subclass.
+4. Problem can be solved by using composition and forwarding methods. 
