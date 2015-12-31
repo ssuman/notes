@@ -11,8 +11,8 @@
 
 ### Item 2 - Consider a builder when faced with many constructors.
 1. Static factories and constructors share a limitation: they do not scale well to large number of optional parameters.
-2. Telescoping constructors and javabeans patters are frequently used pattern to handle large number of optional parameters.
-3. Client code is difficult to write with telescoping pattern and harder still to read it.
+2. Telescoping constructors and javabeans patterns are frequently used patterns to handle large number of optional parameters.
+3. Client code is difficult to write with telescoping pattern and harder to read it.
 4. JavaBeans patterns may leave the object in an inconsistent state partway through its construction. Since it is mutable its not thread safe.
 5. Solution to this would be to use Builder pattern. 
 6. The client calls the constructor of the builder object with all required parameters. Then client calls the optional setters to set each parameter of interest. Finally  calls the build method on the builder to return an immutable object.
