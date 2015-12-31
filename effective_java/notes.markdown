@@ -9,6 +9,16 @@
 	* Providing only static factory methods without public or protected constructors cannot be subclassed.
 	* Not readily distinguishable from other static methods.
 
+### Item 2 - Consider a builder when faced with many constructors.
+1. Static factories and constructors share a limitation: they do not scale well to large number of optional parameters.
+2. Telescoping constructors and javabeans patters are frequently used pattern to handle large number of optional parameters.
+3. Client code is difficult to write with telescoping pattern and harder still to read it.
+4. JavaBeans patterns may leave the object in an inconsistent state partway through its construction. Since it is mutable its not thread safe.
+5. Solution to this would be to use Builder pattern. 
+6. The client calls the constructor of the builder object with all required parameters. Then client calls the optional setters to set each parameter of interest. Finally  calls the build method on the builder to return an immutable object.
+7. The client now is easy to write and read.
+8. Builder pattern is good when there are multiple optional parameters.  
+
 ### Item 5 - Avoid creating unnecessary objects
 1. Reuse of a single object instead of creating a new object each time is both faster and stylish.
 2. Static factory methods often avoid creating unnecessary objects. 
