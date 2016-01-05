@@ -43,6 +43,9 @@ Many approaches exists. They are
 3. Do not put critical code in finalizers instead put them in try..finally{}
 4. Finalizers have performance problems.
 
+#### Item 13 - Minimize the accessiblity of classes and members.
+1. 
+
 #### Item 15 - Minimize mutability
 1. Five rules to follow to create a immutable class.
 	* Don't provide any "setter" methods.
