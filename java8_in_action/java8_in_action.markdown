@@ -45,3 +45,37 @@ Common Functional interfaces listed below
 | Function<T, R>      | T -> R              | IntFunction              |
 | Supplier<T>         | () -> T             | BooleanSupplier          |
 | UnaryOperator<T>    | T -> T              | IntUnaryOperator         |
+
+An Interface intended as Functional interface can be annotated with @FunctionalInterface ! It isn't mandatory but is a good practice.
+
+Predicate  -  Can be used when we have to represent a boolean lambda expression.
+
+#### Chapter 4 - Streams
+
+* Traversable Only Once
+	Stream<String> s = title.stream();
+	a.forEach(System.out::println);
+	a.forEach(System.out::println);
+	// Throws java.lang.IllegalStateExceptions: stream has already been operated upon.
+* Two types of stream operations intermediate and terminal.
+* Intermediate operations return another stream but doesn't perform processing. They are lazily evaluated.
+* Due to lazy evaluation, optimizations such as short-circuiting and loop fusion is possible.
+* Terminal operations produce a result from a stream pipeline.
+
+Intermediate Operations:
+| Operation | Argument Operation | Function Descriptor |
+|-----------|--------------------|---------------------|
+| filter    | Predicate          |  T -> boolean       |
+| map       | Function<T, R>     |  T -> R             |
+| limit     |                    |                     |
+| sorted    |  Comparator        |  (T, T) -> int      |
+| distinct  |                    |                     |
+
+Terminal Operations:
+| Operation |  Purpose |
+|-----------|----------|
+| forEach   | Consumes each element from a stream and applies a lambda. Return void |
+| count     | Returns number of items in a stream. Returns long |
+| collect   | Reduce stream to list, map or int                 |
+
+
