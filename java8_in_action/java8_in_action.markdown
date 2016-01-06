@@ -18,8 +18,8 @@ Lambda expression is an anonymous function: it doesn't have a name, but has para
 
 Examples:
 
-> () -> {}
-> () -> "Raoul"
-> () -> {return "Mario";}
-> (Integer i) -> return "Alan" + i; // Invalid lamba. 
-> (String s) -> {"Iron Man"; }   // Invalid lambda.
+> () -> {};
+> () -> "Raoul";
+> () -> {return "Mario";};
+> (Integer i) -> return "Alan" + i; // Invalid lamba.; 
+> (String s) -> {"Iron Man"; }   // Invalid lambda.;
