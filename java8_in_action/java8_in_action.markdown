@@ -63,6 +63,7 @@ Predicate  -  Can be used when we have to represent a boolean lambda expression.
 * Terminal operations produce a result from a stream pipeline.
 
 Intermediate Operations:
+
 | Operation | Argument Operation | Function Descriptor |
 |-----------|--------------------|---------------------|
 | filter    | Predicate          |  T -> boolean       |
@@ -72,6 +73,7 @@ Intermediate Operations:
 | distinct  |                    |                     |
 
 Terminal Operations:
+
 | Operation |  Purpose |
 |-----------|----------|
 | forEach   | Consumes each element from a stream and applies a lambda. Return void |
