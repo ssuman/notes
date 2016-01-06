@@ -32,7 +32,16 @@ Examples:
 Lambdas can be used in the context of a functional interface. Functional interface is an interface that specifies exactly one abstract method.
 
 	public interface Comparator<T> {
-
 		int compare(T o1, T o2);   // only abstract method.
-
 	}
+An interface is still a functional interface if it has many default methods as long as it specifies only one abstract method.
+
+Common Functional interfaces listed below
+
+|Functional Interface | Function descriptor | primitive specialization |
+|---------------------|---------------------|--------------------------|
+| Predicate<T>        | T -> boolean        | IntPredicate             |
+| Consumer<T>         | T -> void           | IntConsumer              |
+| Function<T, R>      | T -> R              | IntFunction              |
+| Supplier<T>         | () -> T             | BooleanSupplier          |
+| UnaryOperator<T>    | T -> T              | IntUnaryOperator         |
