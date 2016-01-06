@@ -35,8 +35,8 @@ Examples:
 
 Lambdas can be used in the context of a functional interface. Functional interface is an interface that specifies exactly one abstract method.
 
-> public interface Comparator<T> {
+	public interface Comparator<T> {
 
-> 		int compare(T o1, T o2);   // only abstract method.
+		int compare(T o1, T o2);   // only abstract method.
 
->}
+	}
