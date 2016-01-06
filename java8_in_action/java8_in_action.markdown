@@ -53,10 +53,12 @@ Predicate  -  Can be used when we have to represent a boolean lambda expression.
 #### Chapter 4 - Streams
 
 * Traversable Only Once
+
 	Stream<String> s = title.stream();
 	a.forEach(System.out::println);
 	a.forEach(System.out::println);
 	// Throws java.lang.IllegalStateExceptions: stream has already been operated upon.
+
 * Two types of stream operations intermediate and terminal.
 * Intermediate operations return another stream but doesn't perform processing. They are lazily evaluated.
 * Due to lazy evaluation, optimizations such as short-circuiting and loop fusion is possible.
