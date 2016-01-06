@@ -15,6 +15,8 @@ Different ways of selecting numbers.
 
 #### Chapter 3
 
+1. Lambdas in a nutshell
+
 Lambda expression is an anonymous function: it doesn't have a name, but has parameters, a body , a return type and also a list of exceptions that can be thrown.
 
 Examples:
@@ -28,3 +30,13 @@ Examples:
 > (Integer i) -> return "Alan" + i; // Invalid lamba.
 
 > (String s) -> {"Iron Man"; }   // Invalid lambda.;
+
+2. Where and how to use Lambdas ?
+
+Lambdas can be used in the context of a functional interface. Functional interface is an interface that specifies exactly one abstract method.
+
+> public interface Comparator<T> {
+
+> 		int compare(T o1, T o2);   // only abstract method.
+
+>}
